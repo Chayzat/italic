@@ -14,3 +14,19 @@ $beige-color: #E0DBD2;
 $light-gray-color: #8C8C8C;
 $light-choco-color: #817A70;
 
+$first-font: "Inter", sans-serif;
+$second-font: 'IBM Plex Mono', sans-serif;
+$third-font: 'EB Garamond';
+
+$transition: all .3s ease;
+
+$border: 1px solid $black-color;
+$border-radius: 5px;
+
+@mixin title {
+    font-family: $third-font;
+    line-height: 48px;
+    letter-spacing: 2px;
+    color: $black-color;
+    font-weight: 400;
+}

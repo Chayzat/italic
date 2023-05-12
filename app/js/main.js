@@ -1,2 +1,6 @@
-const box = document.querySelector('.box')
-const btn = document.querySelector('.button')
+const headerToggle = document.querySelector('.header-toggle')
+const navList = document.querySelector('.nav-list')
+
+headerToggle.addEventListener('click', () => {
+    navList.classList.toggle('open')
+})

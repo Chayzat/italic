@@ -1,5 +1,116 @@
-@import './_variables';
+@import "./_variables";
+@import "./_reset";
 
 body {
-    background-color: $choco-color;
+  background-color: $light-color;
+  font-family: $first-font;
+}
+
+.subheader {
+  background-color: $choco-color;
+  position: relative;
+
+  &-menu {
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: 11px;
+    text-transform: uppercase;
+    line-height: 12px;
+    display: flex;
+    gap: 32px;
+    justify-content: flex-end;
+    padding: 7px 0 11px;
+    position: relative;
+    li:first-child {
+      position: absolute;
+      top: 7px;
+      left: 0;
+    }
+    &__link {
+      color: $white-color;
+    }
+  }
+}
+.header {
+  padding: 22px 0 27px;
+  &-container {
+    justify-content: space-between;
+    color: $choco-color;
+  }
+  &-logo {
+    width: 81px;
+  }
+  .nav-list,
+  .auth-list {
+    gap: 20px;
+  }
+  &-toggle {
+    cursor: pointer;
+    display: none;
+  }
+}
+
+.home {
+  background-color: $milk-color;
+  &-text {
+    h2 {
+      @include title;
+      font-size: 3rem;
+      font-weight: 400;
+      line-height: 4.813rem;
+      letter-spacing: 3.2px;
+      text-align: center;
+    position: relative;
+      padding: 4.875rem 5rem 5.188rem;
+      &::after {
+        content: url(../images/home-x.webp);
+        position: absolute;
+        top: 36%;
+        right: 28.3%;
+      }
+      &::before {
+        content: '.';
+        font-size: 3rem;
+        position: absolute;
+        bottom: 5%;
+        right: 43.95%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    .nav-list {
+      position: absolute;
+      top: -100%;
+      right: 0;
+      width: 270px;
+      height: auto;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: $beige-color;
+      transition: $transition;
+      border-radius: $border-radius;
+      z-index: 1000;
+      li {
+        padding: 5px 0;
+      }
+      &.open {
+        top: 13.3%;
+      }
+    }
+    &-toggle {
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .home-text h2 {
+    padding: 3.875rem 5rem 4.188rem;
+    line-height: 3.813rem;
+  }
 }
