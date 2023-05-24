@@ -23,9 +23,3 @@ $transition: all 0.3s ease;
 $border: 1px solid $black-color;
 $border-radius: 5px;
 
-@mixin title {
-  font-family: $third-font;
-  line-height: 3rem;
-  letter-spacing: 2px;
-  text-align: center;
-}

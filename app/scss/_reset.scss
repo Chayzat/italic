@@ -38,3 +38,47 @@ img {
   display: flex;
   align-items: center;
 }
+.title {
+  font-family: $third-font;
+  font-weight: 400;
+  line-height: 3rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+@mixin view {
+  position: relative;
+
+  p {
+    position: absolute;
+    font-family: $second-font;
+    top: 11px;
+    left: 11px;
+    background-color: $white-color;
+    font-size: 11px;
+    line-height: 12px;
+    text-transform: uppercase;
+    padding: 1px 6px 5px;
+  }
+  a {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    background-color: $white-color;
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $black-color;
+    &::before {
+      content: url(../images/more.svg);
+    }
+  }
+}
+
+.btn {
+  padding: 7px 16px 11px;
+  border: 1px solid $black-color;
+  display: inline-block;
+}
